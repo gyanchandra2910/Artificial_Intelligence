@@ -96,4 +96,8 @@ def iterative_hill_climb():
         print("path : ",path)
         print("\n")
             
+
+
+
+
 iterative_hill_climb()

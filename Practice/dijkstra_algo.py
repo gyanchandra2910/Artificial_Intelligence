@@ -53,3 +53,26 @@ ans = res_path(parent, "C")
 
 print("Path to C :", ans)
 print("Total Cost:", dist["C"])
+
+
+
+def dijstra (startNode):
+    dist = {}
+    parent = None
+
+    for v in vertex:
+        parent[v] = None
+        dist[v] = 1e9
+
+    pq = []
+    heapq.heappush(pq, (0, startNode, path))
+
+    while len(pq) > 0:
+
+        cost, node, path = heapq.heappop()
+
+        for neighbour, wt in graph[node]:
+            if cost + wt < dist[neighbour]:
+                dist[neighbour] = cost + wt
+                parent[neighbour] = node
+                 
